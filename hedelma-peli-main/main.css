@@ -1,0 +1,199 @@
+body{ 
+    background-color: rgb(153, 153, 153); 
+} 
+
+ 
+ 
+
+h1{ 
+    text-align: center; 
+    background-color: rgb(115, 115, 115); 
+    color: white; 
+    padding-bottom: 25px; 
+    padding-top: 25px; 
+    font-family: 'Times New Roman', serif; 
+    margin-bottom: 80px; 
+} 
+
+li{ 
+    font-family: 'Times New Roman', serif; 
+    font-size: 20px; 
+    margin-bottom: 20px!important; 
+    margin-top: 5px; 
+    border-radius: 5px; 
+} 
+ 
+#bet-btn1{ 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    margin-right: 10px; 
+    margin-left: 0px!important; 
+    padding-right: 5px; 
+    padding-left: 5px; 
+    background-color:rgb(87, 87, 87) ; 
+    border-color:rgb(87, 87, 87) ; 
+} 
+
+#bet-btn2{ 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    margin-right: 10px; 
+    margin-left: 0px!important; 
+    padding-right: 5px; 
+    padding-left: 5px; 
+    background-color:rgb(87, 87, 87) ; 
+    border-color:rgb(87, 87, 87) ; 
+} 
+
+#bet-btn3{ 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    margin-right: 10px; 
+    margin-left: 0px!important; 
+    padding-right: 5px; 
+    padding-left: 5px; 
+    background-color:rgb(87, 87, 87) ; 
+    border-color:rgb(87, 87, 87) ; 
+} 
+
+
+
+
+#game-col{ 
+    border: rgb(87, 86, 86) solid 2px; 
+    border-radius: 5px; 
+    height: 300px; 
+    background-color: rgb(87, 87, 87); 
+    margin-top: 30px; 
+    padding: 5px; 
+}  
+
+#left-col{ 
+    background-color:rgb(115, 115, 115) ; 
+    border: rgb(87, 86, 86) solid 1px; 
+    border-radius: 3px; 
+    padding-left: 10px; 
+    padding-right: 15px; 
+    padding-top: 5px; 
+} 
+  
+#col-right{ 
+    margin-top: 30px; 
+    padding: 10px 0px 0px 10px; 
+    border-radius: 5px; 
+    margin-right: 0px; 
+} 
+
+#coll{ 
+    margin-left: 0px; 
+    background-color: rgb(87, 86, 86); 
+    padding: 0px 5px 0px 5px; 
+    border-radius: 5px; 
+} 
+ 
+#lock-col{ 
+    background-color: #c6c8ca; 
+    padding: 20px 10px 20px 10px; 
+} 
+ 
+#slot-col{ 
+    padding: 10px 10px 10px 10px; 
+    margin-top: 50px; 
+    margin-bottom: 20px; 
+    background-color: #c6c8ca;  
+}  
+
+#start{ 
+    background-image:url("img/bg.jpg") ; 
+} 
+
+ 
+ 
+
+#start-btn{ 
+    margin-bottom: 10px; 
+    width: 200px!important; 
+} 
+
+#guide-btn{ 
+    margin-bottom: 10px; 
+    width: 200px!important; 
+} 
+
+#close-btn{ 
+    width: 200px!important; 
+    margin-top: 430px; 
+    margin-left: 10px; 
+} 
+ 
+#exit-btn{ 
+    width: 150px; 
+    margin-top: 35px; 
+} 
+
+#roll-btn{
+    background-color: #c6c8ca  ;
+    border:rgb(153, 153, 153) ;
+    margin-top: 20px;
+    margin-left: 360px;
+    color: rgb(87, 86, 86) ;
+    padding: 10px 30px 10px 30px;
+}
+ 
+#start-md-col{ 
+    padding-top: 300px!important; 
+} 
+  
+.modal{ 
+    display: none; 
+    position: fixed; 
+    width: 700px; 
+    height: 700px; 
+    background-color: rgba(115, 115, 115, 0.808); 
+} 
+ 
+.modal-content{ 
+    background-color: rgb(153, 153, 153); 
+    width: 100%; 
+    height: 100%; 
+} 
+  
+#right-img{ 
+    border: rgb(87, 86, 86) solid 2px; 
+    border-radius: 10px; 
+    padding: 0px 0px 0px 0px; 
+    margin-right: 10px; 
+}  
+
+#score-img{ 
+    border-radius: 5px; 
+} 
+ 
+#score-img2{ 
+    border-radius: 5px; 
+    margin-left: 10px; 
+} 
+
+#right-img2{ 
+    border-right: rgb(87, 86, 86) solid 2px; 
+    border-top: rgb(87, 86, 86) solid 2px; 
+    border-bottom: rgb(87, 86, 86) solid 2px; 
+    border-radius: 10px; 
+    padding: 0px 0px 0px 5px; 
+    margin-left: 15px;  
+} 
+
+#slot-img{ 
+    border: rgb(87, 86, 86) solid 2px; 
+    border-radius: 5px; 
+    padding: 5px; 
+} 
+
+#vittu{ 
+    border: rgb(87, 86, 86) solid 1px; 
+    padding: 10px 5px 10px 5px; 
+    background-color:rgb(87, 87, 87) ; 
+    border-radius: 5px; 
+} 
+
+ 

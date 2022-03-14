@@ -1,0 +1,209 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+    <meta charset="UTF-8"> 
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  
+
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+
+    <link rel="stylesheet" href="main.css"> 
+
+    <title>Fruit game</title> 
+
+</head> 
+
+<body> 
+
+    <h1>Slot machine</h1> 
+
+    <div class="container"> 
+
+        <div class="row"> 
+
+          <div class="col-3" id="left-col2"> 
+
+            <div class="col-md" id="game-col"> 
+
+                <ul class="list-group"> 
+
+                  <li class="list-group-item list-group-item-dark">Money: <span id="gold">50</span> Gold </li> 
+
+                  <li class="list-group-item list-group-item-dark">Bet: <span id="bet">0</span> Gold </li> 
+
+                </ul> 
+
+                <div class="container"> 
+
+                  <div class="row"> 
+
+                    <div class="col-4" id="left-col"> 
+
+                      <img src="img/gold.png" class="img-responsive" width="50" height="50"> 
+
+                      <button type="button" class="btn btn-dark btn-sm" id="bet-btn1" onclick="changeBet1()">1 Gold</button> 
+
+                    </div> 
+
+                    <div class="col-4" id="left-col"> 
+
+                      <img src="img/gold.png" class="img-responsive" width="50" height="50"> 
+
+                      <button type="button" class="btn btn-dark btn-sm" id="bet-btn2" onclick="changeBet2()">2 Gold</button> 
+
+                    </div> 
+
+                    <div class="col-4" id="left-col"> 
+
+                      <img src="img/gold.png" class="img-responsive" width="50" height="50"> 
+
+                      <button type="button" class="btn btn-dark btn-sm" id="bet-btn3" onclick="changeBet3()">3 Gold</button> 
+
+                    </div> 
+
+                  </div> 
+
+                </div> 
+
+            </div> 
+
+            <a href="start.html" class="btn btn-dark btn-lg" id="exit-btn">Exit</a> 
+
+          </div> 
+
+          <div class="col-5" id="coll"> 
+
+            One of three columns 
+            
+            <div class="container"> 
+
+              <div class="row"> 
+
+                <div class="col-3" id="slot-col"> 
+
+                  <img src="img/arryn.png" class="img-responsive" id="1"  width="95" height="95" > 
+
+                </div> 
+
+                <div class="col-3" id="slot-col"> 
+
+                  <img src="img/targaryen.png" class="img-responsive"  width="95" height="95" id="2"> 
+
+                </div> 
+
+                <div class="col-3" id="slot-col"> 
+
+                  <img src="img/lannister.png" class="img-responsive"  width="95" height="95" id="3"> 
+
+                </div> 
+
+                <div class="col-3" id="slot-col"> 
+
+                  <img src="img/stark.png" class="img-responsive"  width="95" height="95" id="4"> 
+
+                </div> 
+
+                <div class="col-3" id="lock-col"> 
+
+                  <img src="img/lock.png" class="img-responsive"  width="80" height="80" id="lock-img1" onclick="stopOne()"> 
+
+                </div> 
+
+                <div class="col-3" id="lock-col"> 
+
+                  <img src="img/lock.png" class="img-responsive"  width="80" height="80" id="lock-img"> 
+
+                </div> 
+
+                <div class="col-3" id="lock-col"> 
+
+                  <img src="img/lock.png" class="img-responsive"  width="80" height="80" id="lock-img"> 
+
+                </div> 
+
+                <div class="col-3" id="lock-col"> 
+
+                  <img src="img/lock.png" class="img-responsive"  width="80" height="80" id="lock-img"> 
+
+                </div> 
+
+              </div> 
+
+            </div> 
+            <button type="button" class="btn btn-dark btn-lg" id="roll-btn" onclick="roll()" >Roll</button>
+          </div> 
+
+          <div class="col-4" id="col-right"> 
+
+            <div class="col-md" id="vittu"> 
+
+            <div class="container"> 
+
+              <div class="row"> 
+
+                <div class="col-8" id="right-img"> 
+
+                  <img src="img/1.jpg" class="img-responsive" width="260" height="75" id="score-img"> 
+
+                </div> 
+
+                <div class="col-3" id="right-img2"> 
+
+                  <img src="img/2g.png" class="img-responsive"  width="75" height="75" id="score-img2"> 
+
+                </div> 
+
+                <div class="col-8" id="right-img"> 
+
+                  <img src="img/2.jpg" class="img-responsive" width="260" height="75" id="score-img"> 
+
+                </div> 
+
+                <div class="col-3" id="right-img2"> 
+
+                  <img src="img/4g.png" class="img-responsive"  width="75" height="75" id="score-img2"> 
+
+                </div> 
+
+                <div class="col-8" id="right-img"> 
+
+                  <img src="img/3.jpg" class="img-responsive"  width="260" height="75" id="score-img"> 
+
+                </div> 
+
+                <div class="col-3" id="right-img2"> 
+
+                  <img src="img/6g.png" class="img-responsive"  width="75" height="75" id="score-img2"> 
+
+                </div> 
+
+                <div class="col-8" id="right-img"> 
+
+                  <img src="img/4.jpg" class="img-responsive"  width="260" height="75" id="score-img"> 
+
+                </div> 
+
+                <div class="col-3" id="right-img2"> 
+
+                  <img src="img/8g.png" class="img-responsive"  width="75" height="75" id="score-img2"> 
+
+                </div> 
+
+            </div> 
+
+        </div> 
+
+      </div> 
+
+      </div> 
+      <script src="main.js"></script>
+</body> 
+
+</html> 
