@@ -40,16 +40,35 @@ function renderBet(){
 }
 
 // kuvan arvonta
-const images = ['arryn.png' , 'lannister.png' , 'stark.png' , 'targaryen.png']
+const images = ['arryn.png' , 'lannister.png' , 'stark.png' , 'targaryen.png' , 'jackpot.png']
+const locks = [0 , 0 , 0 , 0]
+
+function stop(lockIndex){
+   if (locks[lockIndex] == 0) {
+       locks[lockIndex] = 1
+       
+   } else {
+       locks[lockIndex] = 0
+   }
+} 
 
 function roll(){
-    let i = Math.floor(Math.random() * 4)
-    document.getElementById('1').src = `./img/${images[i]}`
-    let x = Math.floor(Math.random() * 4)
-    document.getElementById('2').src = `./img/${images[x]}`
-    let y = Math.floor(Math.random() * 4)
-    document.getElementById('3').src = `./img/${images[y]}`
-    let a = Math.floor(Math.random() * 4)
-    document.getElementById('4').src = `./img/${images[a]}`
+    if (locks[0] == 0){
+        let i = Math.floor(Math.random() * 5)
+        document.getElementById('1').src = `./img/${images[i]}`
+    }
+    if (locks[1] == 0){
+        let x = Math.floor(Math.random() * 5)
+        document.getElementById('2').src = `./img/${images[x]}`
+    }
+    if (locks[2] == 0){    
+        let y = Math.floor(Math.random() * 5)
+        document.getElementById('3').src = `./img/${images[y]}`}
+    if (locks[3] == 0){
+        let a = Math.floor(Math.random() * 5)
+        document.getElementById('4').src = `./img/${images[a]}`
+    }
+
+
 }
 

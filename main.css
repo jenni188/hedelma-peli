@@ -93,7 +93,7 @@ li{
  
 #lock-col{ 
     background-color: #c6c8ca; 
-    padding: 20px 10px 20px 10px; 
+    padding: 20px 10px 20px 20px; 
 } 
  
 #slot-col{ 
@@ -101,6 +101,8 @@ li{
     margin-top: 50px; 
     margin-bottom: 20px; 
     background-color: #c6c8ca;  
+    border-left: solid  rgb(87, 86, 86) 2px  ;
+    border-right: solid  rgb(87, 86, 86) 2px  ;
 }  
 
 #start{ 
@@ -195,5 +197,6 @@ li{
     background-color:rgb(87, 87, 87) ; 
     border-radius: 5px; 
 } 
+
 
  
