@@ -46,14 +46,10 @@ var win3 = 6;
 var win4 = 8;
 var win5 = 10;
 
-
-
-
-
-
 // kuvan arvonta
 const images = ['arryn.png' , 'lannister.png' , 'stark.png' , 'targaryen.png' , 'jackpot.png']
 const locks = [0 , 0 , 0 , 0]
+const slots = [0 , 0 , 0 , 0]
 
 function stop(lockIndex){
     const slots = document.querySelectorAll(".slot-container .slot-col" )
@@ -72,18 +68,22 @@ function stop(lockIndex){
 function roll(){
     if (locks[0] == 0){
         let i = Math.floor(Math.random() * 5)
+        slots[0] = i
         document.getElementById('1').src = `./img/${images[i]}`
     }
     if (locks[1] == 0){
         let x = Math.floor(Math.random() * 5)
+        slots[1] = x
         document.getElementById('2').src = `./img/${images[x]}`
     }
     if (locks[2] == 0){    
         let y = Math.floor(Math.random() * 5)
+        slots[2] = y
         document.getElementById('3').src = `./img/${images[y]}`
     }
     if (locks[3] == 0){
         let a = Math.floor(Math.random() * 5)
+        slots[3] = a
         document.getElementById('4').src = `./img/${images[a]}`
     }
 
@@ -95,9 +95,10 @@ function roll(){
 
 
 function youWon(){
-    if ('1' == images[4])
-    money == money + win5
-    renderMoney();
+    if (slots[0] == slots[1] == slots[2] == slots[3]){
+        money = money + win1
+        renderMoney();
+    }
 }
 
 function winnings(){
