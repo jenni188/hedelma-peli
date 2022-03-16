@@ -95,9 +95,10 @@ function roll(){
 
 
 function youWon(){
-    if (slots[0] == slots[1] == slots[2] == slots[3]){
-        money = money + win1
-        renderMoney();
+    if (slots[0] == slots[1] && slots[1] == slots[2] && slots[2]== slots[3]){
+        if (slots[0] == 4){
+            alert("mpi")
+        }
     }
 }
 
