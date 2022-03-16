@@ -91,12 +91,12 @@ li{
     border-radius: 5px; 
 } 
  
-#lock-col{ 
+.lock-col{ 
     background-color: #c6c8ca; 
     padding: 20px 10px 20px 20px; 
 } 
  
-#slot-col{ 
+.slot-col{ 
     padding: 10px 10px 10px 10px; 
     margin-top: 50px; 
     margin-bottom: 20px; 
@@ -200,3 +200,7 @@ li{
 
 
  
+.locked{
+    background-color: rgb(153, 153, 153);
+}
+
