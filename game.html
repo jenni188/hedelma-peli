@@ -10,9 +10,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  
-
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> 
 
     <link rel="stylesheet" href="main.css"> 
 
@@ -36,7 +38,7 @@
 
                   <li class="list-group-item list-group-item-dark">Money: <span id="money">50</span> Gold </li> 
 
-                  <li class="list-group-item list-group-item-dark">Bet: <span id="bet">0</span> Gold </li> 
+                  <li class="list-group-item list-group-item-dark">Bet: <span id="bet">1</span> Gold </li> 
 
                 </ul> 
 
@@ -79,9 +81,7 @@
           </div> 
 
           <div class="col-5" id="coll"> 
-
             One of three columns 
-            
             <div class="container slot-container"> 
 
               <div class="row"> 
@@ -211,9 +211,30 @@
         </div> 
 
       </div> 
+      <div> 
+
+        <button type="button" class="btn btn-dark btn-lg"  id="guide-btn" onclick="openModal2()" >Guide</button> 
 
       </div> 
+      <div class="modal" id="myModal2" >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Modal Heading</h4>
+              
+            </div>
+            <div class="modal-body">
+              Modal body..
+            </div>
+            <div class="modal-footer">
+            </div>
+            <button type="button" class="btn btn-dark btn-sm"  onclick="closeModal2()">close</button> 
+          </div>
+        </div>
+      </div>
       <script src="main.js"></script>
 </body> 
 
 </html> 
+
+https://webdevpuneet.com/how-to-create-your-own-animation-for-bootstrap-4-modal/#gsc.tab=0

@@ -1,7 +1,14 @@
 //start modal
 let modal = document.getElementById('myModal');
+let modal1 = document.getElementById('myModal2');
 
+function openModal2(){    
+    modal1.style.display = "block";
+}
 
+function closeModal2(){
+    modal1.style.display = "none";
+}
 
 function openModal(){    
     modal.style.display = "block";
@@ -13,14 +20,11 @@ function closeModal(){
 
 // bet
 
-var bet = 0;
-var bet1 = 1;
-var bet2 = 2;
-var bet3 = 3;
+
 
 function changeBet1(){
-        bet = bet1;
-   renderBet();
+    bet = bet1;
+    renderBet();
 
 }
 
@@ -39,12 +43,20 @@ function renderBet(){
 }
 
 // voitot
+var bet = 1;
+var bet1 = 1;
+var bet2 = 2;
+var bet3 = 3;
+
 var money = 50;
-var win1 = 2;
-var win2 = 4;
-var win3 = 6;
-var win4 = 8;
-var win5 = 10;
+var win1 = bet * 2;
+var win2 = bet * 4;
+var win3 = bet * 6;
+var win4 = bet * 8;
+var win5 = bet * 10;
+var win6 = bet * 5 
+
+console.log(bet);
 
 // kuvan arvonta
 const images = ['arryn.png' , 'lannister.png' , 'stark.png' , 'targaryen.png' , 'jackpot.png']
@@ -96,8 +108,25 @@ function roll(){
 
 function youWon(){
     if (slots[0] == slots[1] && slots[1] == slots[2] && slots[2]== slots[3]){
+        if (slots[0] == 1){        
+            money = money + bet * 2
+            renderMoney();
+        }
+        if (slots[0] == 3){
+            money = money + bet * 4
+            renderMoney();
+        }
+        if (slots[0] == 2){
+            money = money + bet * 6
+            renderMoney();
+        }
+        if (slots[0] == 0){
+            money = money + bet * 8
+            renderMoney();
+        }
         if (slots[0] == 4){
-            alert("mpi")
+            money = money + bet * 10
+            renderMoney();
         }
     }
 }
@@ -114,3 +143,4 @@ function winnings(){
 function renderMoney(){
     document.getElementById("money").innerHTML = "   " + money;
 }
+
