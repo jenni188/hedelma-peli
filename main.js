@@ -1,14 +1,5 @@
 //start modal
 let modal = document.getElementById('myModal');
-let modal1 = document.getElementById('myModal2');
-
-function openModal2(){    
-    modal1.style.display = "block";
-}
-
-function closeModal2(){
-    modal1.style.display = "none";
-}
 
 function openModal(){    
     modal.style.display = "block";
@@ -111,22 +102,27 @@ function youWon(){
         if (slots[0] == 1){        
             money = money + bet * 2
             renderMoney();
+            triggerModal();
         }
         if (slots[0] == 3){
             money = money + bet * 4
             renderMoney();
+            triggerModal();
         }
         if (slots[0] == 2){
             money = money + bet * 6
             renderMoney();
+            triggerModal();
         }
         if (slots[0] == 0){
             money = money + bet * 8
             renderMoney();
+            triggerModal();
         }
         if (slots[0] == 4){
             money = money + bet * 10
             renderMoney();
+            triggerModal();
         }
     }
 }
@@ -144,3 +140,8 @@ function renderMoney(){
     document.getElementById("money").innerHTML = "   " + money;
 }
 
+
+
+  function triggerModal(){
+    $("#myModal2").modal('show');
+  }
