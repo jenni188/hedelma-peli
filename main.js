@@ -9,6 +9,7 @@ function closeModal(){
     modal.style.display = "none";
 }
 
+
 // bet
 
 
@@ -38,17 +39,8 @@ var bet = 1;
 var bet1 = 1;
 var bet2 = 2;
 var bet3 = 3;
-
 var money = 50;
-var win1 = bet * 2;
-var win2 = bet * 4;
-var win3 = bet * 6;
-var win4 = bet * 8;
-var win5 = bet * 10;
-var win6 = bet * 5 
-
-console.log(bet);
-
+var price = 0;
 // kuvan arvonta
 const images = ['arryn.png' , 'lannister.png' , 'stark.png' , 'targaryen.png' , 'jackpot.png']
 const locks = [0 , 0 , 0 , 0]
@@ -101,26 +93,36 @@ function youWon(){
     if (slots[0] == slots[1] && slots[1] == slots[2] && slots[2]== slots[3]){
         if (slots[0] == 1){        
             money = money + bet * 2
+            price = bet * 2
+            renderPrice();
             renderMoney();
             triggerModal();
         }
         if (slots[0] == 3){
             money = money + bet * 4
+            price = bet * 4
+            renderPrice();
             renderMoney();
             triggerModal();
         }
         if (slots[0] == 2){
             money = money + bet * 6
+            price = bet * 6
+            renderPrice();
             renderMoney();
             triggerModal();
         }
         if (slots[0] == 0){
             money = money + bet * 8
+            price = bet * 8
+            renderPrice();
             renderMoney();
             triggerModal();
         }
         if (slots[0] == 4){
             money = money + bet * 10
+            price = bet * 10
+            renderPrice();
             renderMoney();
             triggerModal();
         }
@@ -131,17 +133,27 @@ function winnings(){
     money = money - bet;
     renderMoney();
     if (money <= 0){
-        alert("You are out of money!")
-        location.reload();
+        triggerModal2();
+        
     }
+}
+
+function triggerModal(){
+    $("#myModal2").modal('show');
+}
+
+function triggerModal2(){
+    $("#myModal3").modal('show');
 }
 
 function renderMoney(){
     document.getElementById("money").innerHTML = "   " + money;
 }
 
+function renderPrice(){
+    document.getElementById("price").innerHTML = "   " + price;
+}
 
-
-  function triggerModal(){
-    $("#myModal2").modal('show');
-  }
+function restart(){
+    location.reload();
+}

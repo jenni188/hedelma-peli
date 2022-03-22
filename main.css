@@ -23,39 +23,13 @@ li{
     border-radius: 5px; 
 } 
  
-#bet-btn1{ 
+.bet-btn{ 
     margin-top: 10px; 
     margin-bottom: 10px; 
-    margin-right: 10px; 
     margin-left: 0px!important; 
-    padding-right: 5px; 
-    padding-left: 5px; 
     background-color:rgb(87, 87, 87) ; 
     border-color:rgb(87, 87, 87) ; 
 } 
-
-#bet-btn2{ 
-    margin-top: 10px; 
-    margin-bottom: 10px; 
-    margin-right: 10px; 
-    margin-left: 0px!important; 
-    padding-right: 5px; 
-    padding-left: 5px; 
-    background-color:rgb(87, 87, 87) ; 
-    border-color:rgb(87, 87, 87) ; 
-} 
-
-#bet-btn3{ 
-    margin-top: 10px; 
-    margin-bottom: 10px; 
-    margin-right: 10px; 
-    margin-left: 0px!important; 
-    padding-right: 5px; 
-    padding-left: 5px; 
-    background-color:rgb(87, 87, 87) ; 
-    border-color:rgb(87, 87, 87) ; 
-} 
-
 
 
 
@@ -73,7 +47,7 @@ li{
     border: rgb(87, 86, 86) solid 1px; 
     border-radius: 3px; 
     padding-left: 10px; 
-    padding-right: 15px; 
+
     padding-top: 5px; 
 } 
   
@@ -85,7 +59,6 @@ li{
 } 
 
 #coll{ 
-    margin-left: 0px; 
     background-color: rgb(87, 86, 86); 
     padding: 0px 5px 0px 5px; 
     border-radius: 5px; 
@@ -112,15 +85,11 @@ li{
  
  
 
-#start-btn{ 
+.start{ 
     margin-bottom: 10px; 
     width: 200px!important; 
 } 
-
-#guide-btn{ 
-    margin-bottom: 10px; 
-    width: 200px!important; 
-} 
+ 
 
 #close-btn{ 
     width: 200px!important; 
@@ -193,7 +162,6 @@ li{
 } 
 
 #vittu{ 
-    border: rgb(87, 86, 86) solid 1px; 
     padding: 10px 5px 10px 5px; 
     background-color:rgb(87, 87, 87) ; 
     border-radius: 5px; 
@@ -228,21 +196,35 @@ li{
     transform:none;
   }
 
-  #price{
-      text-align: center;
-      padding-top: 30px;
-  }
+  #priceh5{
+        text-align: center;
+        padding-top: 20px;
+        text-transform: uppercase;
+        font-family: verdana;
+        font-size: 20px;
+        font-weight: 700;
+        color: #f5f5f5;
+        text-shadow: 1px 1px 1px #919191,
+            1px 2px 1px #919191,
+            1px 3px 1px #919191,
+            1px 4px 1px #919191,
+            1px 5px 1px #919191,
+            1px 6px 1px #919191,
+            1px 7px 1px #919191,
+            1px 8px 1px #919191,
+            1px 9px 1px #919191,
+            1px 10px 1px #919191,
+        1px 18px 6px rgba(16,16,16,0.4),
+        1px 22px 10px rgba(16,16,16,0.2),
+        1px 25px 35px rgba(16,16,16,0.2),
+        1px 30px 60px rgba(16,16,16,0.4);
+}
 
 
-
-  #price-btn{
-      margin-bottom: 15px;
-      margin-left: 10px;
-  }
 
 .blink-bg{
     color: #fff;
-    padding: 10px;
+    padding: 20px;
     display: inline-block;
     border-radius: 5px;
     animation: blinkingBackground 1s infinite;
@@ -254,3 +236,4 @@ li{
     75%		{ background-color: #d580ff;}
     100%	        { background-color: #ff9966;}
 }
+
