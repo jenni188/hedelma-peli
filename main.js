@@ -41,13 +41,39 @@ var bet2 = 2;
 var bet3 = 3;
 var money = 50;
 var price = 0;
-var lockedRoll = 0
+
+// Lukittuja rullia on aluksi 0
+var lockedRolls = 0
+
+// Voiko lukitusta käyttää - alkutilanteessa ei
+var canUseLocks = false;
+
+
 // kuvan arvonta
 const images = ['arryn.png' , 'lannister.png' , 'stark.png' , 'targaryen.png' , 'jackpot.png']
 const locks = [0 , 0 , 0 , 0]
 const slots = [0 , 0 , 0 , 0]
 
+function freeLocks(){
+    const slots = document.querySelectorAll(".slot-container .slot-col" )
+    locks[0] = 0
+    slots[0].classList.remove('locked')
+    locks[1] = 0
+    slots[1].classList.remove('locked')
+    locks[2] = 0
+    slots[2].classList.remove('locked')
+    locks[3] = 0
+    slots[3].classList.remove('locked')
+
+}
+
 function stop(lockIndex){
+
+
+    if (canUseLocks == false){ // if (!canUseLocks)
+        return
+    }
+
     const slots = document.querySelectorAll(".slot-container .slot-col" )
    if (locks[lockIndex] == 0) {
        locks[lockIndex] = 1
@@ -59,34 +85,48 @@ function stop(lockIndex){
 } 
 
 function roll(){
+    
+    // Slot 1
+    // Onko lukko1 auki?
     if (locks[0] == 0){
         let i = Math.floor(Math.random() * 5)
         slots[0] = i
         document.getElementById('1').src = `./img/${images[i]}`
+    } else {
+        lockedRolls = lockedRolls + 1
     }
-    if (locks[0] != 0){
-        lockedRoll = lockedRoll + 1
-          
-    } 
    
     if (locks[1] == 0){
         let x = Math.floor(Math.random() * 5)
         slots[1] = x
         document.getElementById('2').src = `./img/${images[x]}`
+    } else {
+        lockedRolls = lockedRolls + 1
     }
+
     if (locks[2] == 0){    
         let y = Math.floor(Math.random() * 5)
         slots[2] = y
         document.getElementById('3').src = `./img/${images[y]}`
+    } else {
+        lockedRolls = lockedRolls + 1
     }
+
     if (locks[3] == 0){
         let a = Math.floor(Math.random() * 5)
         slots[3] = a
         document.getElementById('4').src = `./img/${images[a]}`
+    } else {
+        lockedRolls = lockedRolls + 1
     }
-    if (lockedRoll > 1){
-        locks[lockIndex] = 0
-    } 
+
+    if (lockedRolls > 0){
+        freeLocks()
+        lockedRolls = 0
+        canUseLocks = false
+    } else {
+        canUseLocks = true
+    }
    
  
     winnings();
